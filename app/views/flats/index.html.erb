@@ -1,0 +1,11 @@
+<div class='container'>
+  <h1 class="mt-3">Flats</h1>
+  <ul class="list-group">
+    <% @flats.each do |flat| %>
+      <li class="list-group-item d-flex justify-content">
+        <%= flat['name'] %> - <%= flat['price'] %> <%= flat['priceCurrency']%>
+        <%= link_to 'En savoir +', flat_path(flat['id']), class: "btn btn-primary" %>
+      </li>
+    <% end %>
+  </ul>
+</div>
